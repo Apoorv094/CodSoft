@@ -11,7 +11,7 @@ def generate_password(length, complexity):
     digits = string.digits
     special_characters = string.punctuation
 
-    # Create a pool of characters based on complexity level
+    # Creating a pool of characters based on complexity level
     char_pool = lower_case
     if complexity >= 2:
         char_pool += upper_case
@@ -24,7 +24,6 @@ def generate_password(length, complexity):
     password = ''.join(random.choice(char_pool) for _ in range(length))
     return password
 
-# Main program
 def main():
     print("Welcome to the Password Generator!")
     
@@ -47,6 +46,5 @@ def main():
     except ValueError:
         print("Please enter valid numerical values for length and complexity.")
 
-# Run the program
 if __name__ == "__main__":
     main()
